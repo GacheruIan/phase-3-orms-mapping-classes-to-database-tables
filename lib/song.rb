@@ -30,14 +30,10 @@ class Song
     self.id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
 
   # return the Ruby instance
-      self 
-      
-      
+      self
   end
-  def self.create(name:, album:)
-    song = Song.new(name: name, album: album)
-    song.save
+    def self.create(name:, album:)
+      song = Song.new(name: name, album: album)
+      song.save
   end
-
-
 end
